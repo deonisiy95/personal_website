@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Roboto-Thin;
+    src: url('Roboto-Thin.ttf');
+}
+
 :root {
     --pink-color: #ffe0e3;
     --blue-color: #a7e0e5;
@@ -7,12 +12,8 @@ html {
     height: 100%;
 }
 
-body.asd {
-    --blue-color: red;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto-Thin, Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -46,6 +47,19 @@ body {
     transition: transform 1s;
 }
 
+.box_front > .item {
+    text-align: start;
+    line-height: 56px;
+}
+
+.box_bottom > .item {
+    font-size: 1.5rem;
+    text-align: start;
+    padding: 32px;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
 .item {
     border-radius: 20px;
     width: 100%;
@@ -53,11 +67,14 @@ body {
     opacity: 0;
     transition: opacity 0.2s linear;
     background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .active > .item {
     color: red;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: opacity 0.2s linear;
 }
 
