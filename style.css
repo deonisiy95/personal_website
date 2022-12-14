@@ -85,7 +85,73 @@ strong {
     text-align: end;
 }
 
-.box_right h3 {
+.box_back > .item {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.workStage {
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 8px 16px;
+    width: 65%;
+    margin-bottom: 40px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 18px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 8px;
+}
+
+.workStage:not(:last-child):before {
+    content: '';
+    width: 1px;
+    background-color: red;
+    height: 40px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.workStage > div {
+    font-size: 20px;
+}
+
+.date {
+    text-align: start;
+    margin-left: 42px;
+}
+
+.company {
+    position: relative;
+    display: inline-block;
+}
+
+.companyPosition {
+    grid-area: 1/1/1/4;
+}
+
+.jivo {
+    content: '';
+    background-image: url('./images/jivo.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 8px;
+    width: 18px;
+    height: 18px;
+    margin: 3px 0;
+    border-radius: 50%;
+    background-color: #e5726c;
+}
+
+.blogman {
+    background-image: url('./images/blogman.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    width: 20px;
+    height: 24px;
 }
 
 .item {
