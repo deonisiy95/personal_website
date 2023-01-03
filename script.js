@@ -104,4 +104,7 @@ window.onload = function() {
   document.addEventListener('click', nextScreen);
   document.addEventListener('touchstart', handleTouchStart, false);
   document.addEventListener('touchmove', handleTouchMove, false);
+  document.getElementById('links').addEventListener(
+    'click', event => event.stopPropagation()
+  );
 }
