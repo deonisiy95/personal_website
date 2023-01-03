@@ -98,7 +98,7 @@ strong {
 .skills {
     text-align: start;
     font-size: 32px;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .skills > div:before {
@@ -173,7 +173,7 @@ strong {
 }
 
 .workStage > div {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .companyPosition {
@@ -226,7 +226,7 @@ strong {
     transition: opacity 0.2s linear;
 }
 
-.control_text {
+.control_text, .mobile_control_text {
     position: absolute;
     bottom: 34px;
     width: 100%;
@@ -234,6 +234,11 @@ strong {
     color: white;
     font-size: 32px;
     user-select: none;
+}
+
+.mobile_control_text {
+    display: none;
+    font-size: 3em;
 }
 
 .link_list {
@@ -478,8 +483,11 @@ strong {
 }
 
 @media (pointer: coarse)  {
-    .circle_one {
+    .circle_one, .control_text {
         display: none;
+    }
+    .mobile_control_text {
+        display: block;
     }
     .circle_two {
         left: 30px;
