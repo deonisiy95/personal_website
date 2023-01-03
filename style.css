@@ -79,10 +79,15 @@ strong {
 
 .box_right > .item,
 .box_top > .item,
-.box_bottom > .item {
+.box_bottom > .item,
+.box_left > .item {
     display: flex;
     flex-direction: column;
     justify-content: start;
+}
+
+.box_left > .item {
+    position: relative;
 }
 
 .skills {
@@ -224,6 +229,45 @@ strong {
     color: white;
     font-size: 32px;
     user-select: none;
+}
+
+.links {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    position: absolute;
+    height: 100%;
+}
+
+.link {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.download {
+    background-image: url('./images/download.svg');
+    width: 55px;
+    height: 55px;
+}
+.habr {
+    background-color: var(--text-color);
+    border-radius: 50%;
+    background-position: 8px 8px;
+    background-size: 40px;
+    background-image: url('./images/habr.svg');
+}
+.telegram {
+    background-image: url('./images/telegram.svg');
+}
+.github {
+    background-image: url('./images/github.svg');
+    width: 56px;
+    height: 56px;
 }
 
 .box_surface {
@@ -410,5 +454,10 @@ strong {
     }
     100% {
         transform: translateX(-30px) translateY(10px);
+    }
+}
+
+@media (pointer: coarse)  {
+    body {
     }
 }
